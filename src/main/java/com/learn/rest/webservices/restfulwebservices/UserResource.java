@@ -1,5 +1,6 @@
 package com.learn.rest.webservices.restfulwebservices;
 
+import org.hibernate.annotations.Any;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,8 +26,8 @@ public class UserResource {
     }
 
     @RequestMapping("/users/{id}")
-    public User retrieveSpecificUser(@PathVariable Integer id) {
-        return service.findOne(id);
+    public User retrieveSpecificUser(@PathVariable long id) {
+            return service.findOne(id);
     }
 
     @PostMapping("/users/create")

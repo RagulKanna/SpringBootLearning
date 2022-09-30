@@ -1,8 +1,8 @@
 package com.learn.rest.webservices.restfulwebservices;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+
 import java.time.LocalDate;
+
 
 public class User {
 
@@ -15,24 +15,21 @@ public class User {
                 '}';
     }
 
-    @Id
-    @GeneratedValue
-    private Integer id;
+    private long id;
     public String name;
     public LocalDate birthDate;
 
-    public User(Integer id, String name, LocalDate birthDate) {
-        super();
+    public User(long id, String name, LocalDate birthDate) {
         this.id = id;
         this.name = name;
         this.birthDate = birthDate;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
