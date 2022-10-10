@@ -1,9 +1,6 @@
-package com.learn.rest.webservices.restfulwebservices;
+package com.learn.rest.webservices.restfulwebservices.java;
 
 import org.springframework.web.bind.annotation.*;
-
-import javax.jws.soap.SOAPBinding;
-import java.util.List;
 
 @RestController
 public class Controller {
@@ -18,7 +15,7 @@ public class Controller {
 
     @GetMapping(path = "/learn")
     public String learn() {
-        return "hey Sinamika";
+        return "hey Sinamika-Radha";
     }
 
     @RequestMapping(path = "/learn-json")

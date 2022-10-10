@@ -1,4 +1,4 @@
-package com.learn.rest.webservices.restfulwebservices;
+package com.learn.rest.webservices.restfulwebservices.java;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

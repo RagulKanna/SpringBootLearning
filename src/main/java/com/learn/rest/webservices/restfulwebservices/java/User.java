@@ -1,4 +1,4 @@
-package com.learn.rest.webservices.restfulwebservices;
+package com.learn.rest.webservices.restfulwebservices.java;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
