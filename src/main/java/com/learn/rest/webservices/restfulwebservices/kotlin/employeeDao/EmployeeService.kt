@@ -5,4 +5,5 @@ interface EmployeeService {
     fun getAllEmployees(): List<Employee>
     fun getSpecificEmployee(id: Long): Employee?
     fun updateSpecificEmployeeById(employee: Employee, id: Long): Employee
+    fun deleteSpecificEmployeeById(id: Long)
 }

@@ -31,6 +31,12 @@ class EmployeeController {
     @PutMapping("/updateEmployee/{id}")
     fun updateSpecificEmployeeDetails(@RequestBody employee: Employee, @PathVariable("id") id: Int): String {
         employeeService.updateSpecificEmployeeById(employee, id.toLong())
-        return "Employee Details is updated"
+        return "Employee Details is updated successfully"
+    }
+
+    @DeleteMapping("/deleteEmployee/{id}")
+    fun deleteSpecificEmployeeDetails(@PathVariable("id") id: Int): String {
+        employeeService.deleteSpecificEmployeeById(id.toLong())
+        return "Employee Details is Deleted successfully"
     }
 }

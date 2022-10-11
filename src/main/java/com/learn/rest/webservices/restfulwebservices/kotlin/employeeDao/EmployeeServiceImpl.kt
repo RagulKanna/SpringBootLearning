@@ -50,5 +50,16 @@ class EmployeeServiceImpl : EmployeeService {
         return employeeDB
     }
 
+    override fun deleteSpecificEmployeeById(id: Long) {
+        employeeRepository.findById(id).orElseThrow {
+            ResourceNotFoundException(
+                "Employee",
+                "Id",
+                id!!
+            )
+        }
+        employeeRepository.deleteById(id)
+    }
+
 
 }

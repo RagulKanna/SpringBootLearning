@@ -1,12 +1,13 @@
 package com.learn.rest.webservices.restfulwebservices.kotlin
 
-import org.springframework.boot.SpringApplication
+import org.hibernate.annotations.common.util.impl.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class RestfulWebServicesApplicationKotlin
+
+private val log = LoggerFactory.logger(RestfulWebServicesApplicationKotlin::class.java)
 
 fun main(args: Array<String>) {
     runApplication<RestfulWebServicesApplicationKotlin>(*args)
