@@ -2,6 +2,7 @@ package com.learn.rest.webservices.restfulwebservices.kotlin.employeeDao
 
 import org.springframework.stereotype.Service
 
+
 @Service
 class EmployeeServiceImpl : EmployeeService {
     val employeeRepository: EmployeeRepository
@@ -17,6 +18,7 @@ class EmployeeServiceImpl : EmployeeService {
     override fun getAllEmployees(): List<Employee> {
         return employeeRepository.findAll()
     }
+
 
     override fun getSpecificEmployee(id: Long): Employee? {
         /*   val employee = employeeRepository.findById(id)
@@ -59,6 +61,10 @@ class EmployeeServiceImpl : EmployeeService {
             )
         }
         employeeRepository.deleteById(id)
+    }
+
+    override fun getAllEmployeesByQuery(): Any {
+        return employeeRepository.getAllEmployeesQuery()
     }
 
 

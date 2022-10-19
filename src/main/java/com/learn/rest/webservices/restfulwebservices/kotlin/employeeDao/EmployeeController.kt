@@ -1,5 +1,6 @@
 package com.learn.rest.webservices.restfulwebservices.kotlin.employeeDao
 
+import org.springframework.data.jpa.repository.Query
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -21,6 +22,11 @@ class EmployeeController {
     @GetMapping("/allEmployees")
     fun getAllEmployeeDetails(): List<Employee> {
         return employeeService.getAllEmployees()
+    }
+
+    @GetMapping("/allEmployeesQuery")
+    fun getAllEmployeeDetailsQuery(): Any {
+        return employeeService.getAllEmployeesByQuery()
     }
 
     @GetMapping("{id}")

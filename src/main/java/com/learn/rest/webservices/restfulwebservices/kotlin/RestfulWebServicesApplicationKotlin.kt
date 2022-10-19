@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class RestfulWebServicesApplicationKotlin
+open class RestfulWebServicesApplicationKotlin
 
 private val log = LoggerFactory.logger(RestfulWebServicesApplicationKotlin::class.java)
 
